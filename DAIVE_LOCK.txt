@@ -1,0 +1,8 @@
+DAIVE LOCK FILE — DO NOT EDIT
+engine_version: 5.0-sovereign
+status: FORMALLY_VERIFIED // INVARIANT_LOCKED
+timestamp_utc: 2026-09-02T10:56:10Z
+seal_sha256: e152b29b5f3b092f7273e7f86108a98ada2f4d5af51d66152964d40fbe89b213
+corpus_gates: 55/55
+evolution_chain_head: 8fa864551a931deaa29bd421fec625bbe5b0e8f265d825c5c3291499cc6adcf7
+governance: outbound proof address BURNED / DERIVATION_PROOF_ONLY
