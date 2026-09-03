@@ -1,0 +1,234 @@
+{
+  "$schema": "https://json-schema.org",
+  "title": "SovereignFortress_Audit_Payload_v4_1_0",
+  "description": "Deterministic system validation trace vector for continuous-discrete domain translation verification and external adversarial audit baseline. Upgraded from v4.0.0: syntax repaired, residue ordering corrected, Garner block recomputed, heptaract 7d count corrected, Hamming matrix restored, Farey error recomputed, stencil contradiction reconciled. Every checkable claim re-verified from integers on 2026-09-02.",
+  "timestamp_epoch_nanos_ignored_for_hash": 1788414000000000000,
+  "upgrade_manifest": {
+    "upgraded_from": "4.0.0",
+    "upgraded_to": "4.1.0",
+    "audit_engine": "DAIVE v5.0-sovereign",
+    "audit_seal_sha256": "e152b29b5f3b092f7273e7f86108a98ada2f4d5af51d66152964d40fbe89b213",
+    "corrections_applied": [
+      "syntax: empty arrays filled (rns_basis_primes, discrete_set_range, hamming matrix rows, test vectors); numeric literal 823,543 unquoted",
+      "rns residue triple ordering aligned to X_exact: (12345, 54321, 41284)",
+      "garner block recomputed: v0=12345, v1=44533, v2=55799; term_1=2917757627; term_2=239537875393801 (v4.0.0 block did not sum to its own X)",
+      "heptaract 7d element count corrected to 1; 823543 relocated as heptavalent_state_space = 7^7",
+      "hamming parity matrix third row restored to [0,1,1,1,0,0,1] (v4.0.0 row broke the true-zero lock)",
+      "farey relative error recomputed: 0.00266% (v4.0.0 stated 0.0095%)",
+      "stencil truncation-order contradiction with Q-08 reconciled to the conservative O(h^2) bound"
+    ]
+  },
+  "system_metadata": {
+    "architecture_version": "4.1.0",
+    "magic_id": "0x564F5253",
+    "magic_id_ascii": "VORS",
+    "abi_alignment_bytes": 64,
+    "target_hardware": "AVX-512_CUDA_Cooperative_Groups"
+  },
+  "cryptographic_commitments": {
+    "primary_signature_standard": "NIST_FIPS_204_ML-DSA-65",
+    "post_quantum_state_seal": "0xb5fd610a75cd80836897ef02a93fcc9cbd9dcb059b496cf06d2d9b2957ec120e",
+    "historical_koblitz_address_revoked": "19UdRsPi5LMQo9a78n2f9QUDz4wJ4pptt4",
+    "historical_koblitz_address_status": "BURNED / DERIVATION_PROOF_ONLY",
+    "master_invariant_merkle_root": "e152b29b5f3b092f7273e7f86108a98ada2f4d5af51d66152964d40fbe89b213",
+    "master_invariant_merkle_root_note": "equals the DAIVE v5.0 state seal — the payload is sealed to the engine that audited it"
+  },
+  "tier_1_exact_algebraic_invariants": {
+    "galois_field_f101": {
+      "field_characteristic": 101,
+      "characteristic_polynomial": "x^2 - x - 1",
+      "discriminant_delta": 5,
+      "legendre_symbol_5_101": 1,
+      "modular_roots": {
+        "r_1_silver_generator": 23,
+        "r_2_gold_anchor": 79
+      },
+      "vieta_closure_assertions": {
+        "trace_invariant_sum_mod_101": 1,
+        "norm_invariant_product_mod_101": 100
+      },
+      "multiplicative_orders": {
+        "ord_r1": 50,
+        "ord_r2": 25,
+        "pisano_period_length": 50,
+        "verification_note": "ord_101(23)=50, ord_101(79)=25, pisano(101)=50 — all recomputed and confirmed 2026-09-02"
+      }
+    },
+    "high_capacity_residue_number_system": {
+      "rns_basis_primes": [65519, 65521, 65551],
+      "master_system_modulus_M_prime": 281401947524849,
+      "target_residue_triple_r": {
+        "r_1_ascending_lower_twin": 12345,
+        "r_2_descending_upper_twin": 54321,
+        "r_3_parity_scalar": 41284,
+        "ordering_note": "v4.0.0 listed r_1/r_2 swapped; X_exact below is only consistent with this ordering"
+      },
+      "garner_mixed_radix_coefficients": {
+        "v_0": 12345,
+        "v_1": 44533,
+        "v_2": 55799
+      },
+      "intermediate_reconstruction_terms": {
+        "base_term": 12345,
+        "term_1": 2917757627,
+        "term_2": 239537875393801
+      },
+      "reconstructed_positional_master_X_exact": 239540793163773,
+      "reconstruction_identity": "X = v_0 + v_1*m_1 + v_2*m_1*m_2 = 12345 + 2917757627 + 239537875393801",
+      "normalized_phase_scalar_theta_prime": 0.8512407084269398
+    },
+    "level_6_hardware_logic_gates": {
+      "registers": {
+        "a": 718,
+        "b": 892,
+        "m": 1118,
+        "p": 158
+      },
+      "gate_matrix_outputs": {
+        "gate_1_bitwise_xor_and_lock": 18,
+        "gate_2_bitwise_or_and_lock": 158,
+        "gate_3_modulo_49_null_projection": 0,
+        "gate_4_god_seal_invariant": 43,
+        "gate_5_coset_horizon_shift": 7,
+        "gate_6_hydrogen_line_frequency_sync_mhz": 1420
+      }
+    },
+    "discrete_heptaract_topology": {
+      "dimension": 7,
+      "valence_per_vertex": 7,
+      "dihedral_symmetry_group": "D14",
+      "binomial_element_counts": {
+        "vertices_0d": 128,
+        "edges_1d": 448,
+        "faces_2d": 672,
+        "cells_3d": 560,
+        "tesseracts_4d": 280,
+        "penteracts_5d": 84,
+        "facets_6d": 14,
+        "enclosed_volume_7d": 1
+      },
+      "heptavalent_state_space_7_pow_7": 823543,
+      "observer_frame_quantization": {
+        "discrete_set_range": [0, 7],
+        "midpoint_continuous": 3.5,
+        "quantized_snap_coordinate": 4,
+        "hamming_weight_observer": 1,
+        "metric_offset_units": 1
+      }
+    },
+    "systematic_7_4_3_hamming_lattice": {
+      "linear_block_parameters": {
+        "n_total_bits": 7,
+        "k_data_bits": 4,
+        "d_min_distance": 3
+      },
+      "parity_check_matrix_h": [
+        [1, 0, 1, 1, 1, 0, 0],
+        [1, 1, 0, 1, 0, 1, 0],
+        [0, 1, 1, 1, 0, 0, 1]
+      ],
+      "true_zero_syndrome_lock": [0, 0, 0],
+      "test_vectors": {
+        "canonical_codeword": [1, 0, 1, 0, 0, 1, 1],
+        "induced_single_bit_error_index_3": [1, 0, 1, 1, 0, 1, 1],
+        "resulting_error_syndrome": [1, 1, 1],
+        "recovered_codeword": [1, 0, 1, 0, 0, 1, 1]
+      }
+    }
+  },
+  "tier_2_certified_numerical_bounds": {
+    "specie_metrology": {
+      "silver_mass_standard_iupac_u": 107.8682,
+      "gold_mass_standard_iupac_u": 196.966569,
+      "continuous_golden_ratio_phi": 1.618033988749895,
+      "specie_equilibrium_modulator_omega_eq": 1.1285256849511848,
+      "gaussian_normalizer_reference": 1.1283791670955126,
+      "gaussian_normalizer_identity": "2/sqrt(pi)",
+      "gaussian_convergence_relative_gap": 0.0001298,
+      "coupled_potential_scale_v_0": 0.960647003535844
+    },
+    "rational_scaling_cross_mappings": {
+      "primary_rational_operator": "20/13",
+      "potosi_metallurgical_fine_purity_fraction": "923/1000",
+      "spectroscopic_h1_line_frequency_mhz": 1420.0,
+      "physical_maser_baseline_reference_mhz": 1420.405751768,
+      "frequency_relative_gap": 0.0002857,
+      "macro_mass_bond_constant_oz": 1193.5,
+      "subatomic_mass_ratio_proton_to_electron_calc": 1836.1538461538462,
+      "subatomic_ratio_identity": "23870/13",
+      "codata_proton_to_electron_reference": 1836.15267343,
+      "subatomic_relative_gap": 6.387e-7
+    },
+    "spatial_discretization_stencil": {
+      "stencil_type": "27-point_compact_isotropic_laplacian",
+      "truncation_order": "O(h^2)_conservative_bound_per_Q-08",
+      "truncation_order_note": "v4.0.0 stated O(h^4)_biharmonic_pure while its own Q-08 register degraded bounds to O(h^2); reconciled to the conservative bound",
+      "diagonal_wave_vector_deflation_percent": 0.0,
+      "stencil_weights": {
+        "faces_6": 14.0,
+        "edges_12": 3.0,
+        "corners_8": 1.0,
+        "center_1": -128.0
+      },
+      "zero_sum_partitioning_invariant": 0
+    },
+    "spectral_eigenvalue_containment": {
+      "bounding_theorem": "Kato-Temple_Outward_Rounded_Interval",
+      "ieee_754_directed_modes": {
+        "infimum_rounding_protocol": "ROUND_FLOOR",
+        "supremum_rounding_protocol": "ROUND_CEILING"
+      },
+      "continuum_operator_bracketing_formula": "[mu - (eta^2 / delta) - C_trunc * h^2, mu + (eta^2 / delta) + C_trunc * h^2]"
+    },
+    "hydrodynamic_equilibrium_milestones": {
+      "oblate_maclaurin_sequence": {
+        "jacobi_secular_bifurcation_eccentricity": 0.812670010612,
+        "maclaurin_peak_rotation_eccentricity": 0.929955685456,
+        "dynamical_instability_limit_eccentricity": 0.952886702034
+      },
+      "triaxial_jacobi_sequence": {
+        "lame_degree_3_spectral_invariants": {
+          "p_invariant": 2.29236115304,
+          "q_invariant": 0.942180994428
+        },
+        "physical_deformation_roots": {
+          "kappa_minus_pear_branch": 0.536632449164,
+          "kappa_plus": 1.755728703876
+        }
+      },
+      "poincare_pear_shaped_instability": {
+        "fourth_order_energy_variation_coefficient_k4_sign": -1,
+        "stability_status": "SUBCRITICAL_DYNAMICALLY_UNSTABLE_FISSILE_COLLAPSE",
+        "bifurcation_semi_axis_ratio_a1_a3": 2.5066,
+        "farey_mediant_rational_approximant": "188/75",
+        "farey_fraction_decimal": 2.506666666667,
+        "mapping_relative_error_percent": 0.00266
+      }
+    }
+  },
+  "tier_3_open_claims_quarantine_manifest": {
+    "proof_promotion_constitution_status": "PENDING_CONVERGENCE_CLASSIFIED_AS_OPEN_INQUIRY",
+    "monitored_domains": [
+      "physical_artifact_provenance",
+      "cadastral_land_patent_deeds",
+      "historical_custody_claims",
+      "navier_stokes_continuum_analytic_smoothness",
+      "riemann_hypothesis"
+    ],
+    "quarantine_isolation_registry": {
+      "Q-01": "X_CRT congruence error fixed from mod 13 = 0 to mod 13 = 5",
+      "Q-02": "Legacy non-coprime RNS product baseline 462034366 corrected to 463072246",
+      "Q-03": "Extended Euclidean base weight y_2 adjusted from 879 to 173 over basis rings",
+      "Q-04": "Formally rejected radical 5 existence over modulo 49",
+      "Q-05": "Fractional ring walk stride s = 101/3 cast out for exact integer stride s = +3",
+      "Q-06": "Gematria alphanumeric ordinals canonicalized to standard simple ordinal sum 81",
+      "Q-07": "Subgroup cyclic generator order corrected from order-6 to order-7 cyclic field closure",
+      "Q-08": "Leading truncation error bounds degraded to pure biharmonic O(h^2) for discrete solvers",
+      "Q-09": "v4.0.0 RNS residue triple ordering (54321, 12345, 41284) contradicted its own X_exact; aligned to (12345, 54321, 41284)",
+      "Q-10": "v4.0.0 Garner block (v0, v1, term_1, term_2) recomputed — legacy block did not reconstruct its own master integer",
+      "Q-11": "v4.0.0 Hamming parity-matrix third row corrupted; restored to canonical [0,1,1,1,0,0,1]",
+      "Q-12": "v4.0.0 heptaract 7d element count 823543 corrected to 1 (7^7 relocated as state-space invariant)",
+      "Q-13": "v4.0.0 Farey relative error 0.0095% recomputed to 0.00266%"
+    }
+  }
+}
